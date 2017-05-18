@@ -15,7 +15,6 @@ Software Required:
 */
 
 // Include application, user and local libraries
-
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
