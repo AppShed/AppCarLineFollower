@@ -19,7 +19,7 @@ A line following Arduino sketch for the AppShed AppCar
 ### IR Sensors
 We make use of only 2 IR sensors for this project mounted against a metal plate.  
 
-#### Sensor & Tape Placememnts
+#### IR Sensor & Tape Placememnts
 - Height between floor surface and IR LEDs = 5mm
 - Width of Electric Tape on teh floor = 30mm
 - Width between IR Sensors = 20mm
