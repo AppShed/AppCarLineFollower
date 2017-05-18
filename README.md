@@ -17,7 +17,7 @@ A line following Arduino sketch for the AppShed AppCar
 - Visual Studio Code (with Arduino IDE plugin - for Intellisence Code Editing)
 
 ### IR Sensors
-We make use of only 2 IR sensors for this project mounted against a metal plate.  
+We make use of only 2 IR sensors for this project mounted against a metal plate. It is important to use a white floor surface with black electric tape.  
 
 #### IR Sensor & Tape Placememnts
 - Height between floor surface and IR LEDs = 5mm
