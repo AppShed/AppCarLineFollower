@@ -4,12 +4,12 @@ A line following Arduino sketch for the AppShed AppCar
 ## Setting everything up... 
 
 ### Hardware Required: 
-    - Laptop/Computer running Windows or Mac
-    - NodeMCU 1.0 (ESP-12E Module)
-    - Motor Shield
-    - Infra Red Sensors x 2
-    - 2 Motors with Wheels
-    *(The basic AppCar Kit)*
+- Laptop/Computer running Windows or Mac
+- NodeMCU 1.0 (ESP-12E Module)
+- Motor Shield
+- Infra Red Sensors x 2
+- 2 Motors with Wheels
+*(The basic AppCar Kit)*
 
 ### Software Required:
     - Arduino IDE 1.8.X
