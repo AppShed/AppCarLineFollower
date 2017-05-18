@@ -21,5 +21,5 @@ We make use of only 2 IR sensors for this project mounted against a metal plate.
 
 #### IR Sensor & Tape Placememnts
 - Height between floor surface and IR LEDs = 5mm
-- Width of Electric Tape on the floor = 20-35mm
+- Width of Electric Tape on the floor = 20-25mm
 - Width between IR Sensors = 20mm
