@@ -12,6 +12,6 @@ A line following Arduino sketch for the AppShed AppCar
 *(The basic AppCar Kit)*
 
 ### Software Required:
-    - Arduino IDE 1.8.X
-    - NodeMCU Drivers for Windows & Mac (http://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
-    - Visual Studio Code (with Arduino IDE plugin - for Intellisence Code Editing)
+ - Arduino IDE 1.8.X
+ - NodeMCU Drivers for Windows & Mac (http://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
+ - Visual Studio Code (with Arduino IDE plugin - for Intellisence Code Editing)
