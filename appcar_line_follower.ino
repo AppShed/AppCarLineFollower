@@ -45,6 +45,7 @@ void setup()
     pinMode(RM1, OUTPUT);   // set RM1 pin to OUTPUT
     pinMode(RM2, OUTPUT);   // set RM2 pin to OUTPUT
     
+    
     // Start Serial with Bitrate of 115200
     Serial.begin(115200);
 }
@@ -54,16 +55,16 @@ void loop()
     if(!(digitalRead(LS)) && !(digitalRead(RS)))     // Drive Forward
     {
         digitalWrite(LM1, HIGH);
-        digitalWrite(LM2, LOW);
+        digitalWrite(LM2, HIGH);
         digitalWrite(RM1, HIGH);
-        digitalWrite(RM2, LOW);
+        digitalWrite(RM2, HIGH);
         Serial.println("Drive Forward");
     }
     
     if(!(digitalRead(LS)) && digitalRead(RS))     // Turn right
     {
         digitalWrite(LM1, HIGH);
-        digitalWrite(LM2, LOW);
+        digitalWrite(LM2, HIGH);
         analogWrite(RM1, pwmSpeed);
         digitalWrite(RM2, LOW);
         Serial.println("Turning Right");
@@ -74,7 +75,7 @@ void loop()
         analogWrite(LM1, pwmSpeed);
         digitalWrite(LM2, LOW);
         digitalWrite(RM1, HIGH);
-        digitalWrite(RM2, LOW);
+        digitalWrite(RM2, HIGH);
         Serial.println("Turning Left");
     }
     
