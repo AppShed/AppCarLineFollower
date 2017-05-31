@@ -18,13 +18,13 @@ Software Required:
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-// Define variables and constants
-int pwmSpeed = 200; // This sets the motor speed for turning left or right
-
 // Definning Inputs
 #define LS 14     // left sensor
 #define CS 12     // centre sensor
 #define RS 13     // right sensor
+
+// PWM Inputs
+#define POT A0 // Analog Input A0
 
 // Definning Outputs
 #define LM1 5     // left motor - forward
@@ -39,43 +39,53 @@ void setup()
     pinMode(RS, INPUT);     // set RS pin to INPUT
     pinMode(CS, INPUT);     // set CS pin to INPUT
     
+    // Analog Inputs
+    pinMode(POT, INPUT);    // set POT pin to INPUT
+
     // Motors
     pinMode(LM1, OUTPUT);   // set LM1 pin to OUTPUT
     pinMode(LM2, OUTPUT);   // set LM2 pin to OUTPUT
     pinMode(RM1, OUTPUT);   // set RM1 pin to OUTPUT
     pinMode(RM2, OUTPUT);   // set RM2 pin to OUTPUT
     
-    
-    // Start Serial with Bitrate of 115200
-    Serial.begin(115200);
+    // Start Serial with Bitrate of 115200 
+    Serial.begin(115200); 
 }
 void loop()
 {
+    // Reading the Analog Signal
+    int potReadValue = analogRead(POT);
+
+    // Basic Calculation (0-1000)
+    int PWM = 1000 - potReadValue;
     
+    // Print PWM Values to Serial Console
+    Serial.println(PWM);
+
     if(!(digitalRead(LS)) && !(digitalRead(RS)))     // Drive Forward
     {
-        digitalWrite(LM1, HIGH);
-        digitalWrite(LM2, HIGH);
-        digitalWrite(RM1, HIGH);
-        digitalWrite(RM2, HIGH);
+        analogWrite(LM1, PWM);
+        digitalWrite(LM2, LOW);
+        analogWrite(RM1, PWM);
+        digitalWrite(RM2, LOW);
         Serial.println("Drive Forward");
     }
     
     if(!(digitalRead(LS)) && digitalRead(RS))     // Turn right
     {
-        digitalWrite(LM1, HIGH);
-        digitalWrite(LM2, HIGH);
-        analogWrite(RM1, pwmSpeed);
+        analogWrite(LM1, PWM);
+        digitalWrite(LM2, LOW);
+        digitalWrite(RM1, LOW);
         digitalWrite(RM2, LOW);
         Serial.println("Turning Right");
     }
     
     if(digitalRead(LS) && !(digitalRead(RS)))     // Turn left
     {
-        analogWrite(LM1, pwmSpeed);
+        digitalWrite(LM1, LOW);
         digitalWrite(LM2, LOW);
-        digitalWrite(RM1, HIGH);
-        digitalWrite(RM2, HIGH);
+        analogWrite(RM1, PWM);
+        digitalWrite(RM2, LOW);
         Serial.println("Turning Left");
     }
     
