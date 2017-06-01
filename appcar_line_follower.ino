@@ -1,17 +1,5 @@
 /*
 Project: AppCar Line Follower
-
-Hardware Required: 
-    - NodeMCU 1.0 (ESP-12E Module)
-    - Motor Shield
-    - Infra Red Sensors x 2
-    - 2 Motors with Wheels
-    *(The basic AppCar Kit)*
-
-Software Required:
-    - Arduino IDE 1.8.X
-    - NodeMCU Drivers for Windows & Mac (http://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
-    - Visual Studio Code (with Arduino IDE plugin - for Intellisence Code Editing)
 */
 
 // Include application, user and local libraries
