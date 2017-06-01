@@ -13,6 +13,8 @@ Project: AppCar Line Follower
 
 // PWM Inputs
 #define POT A0 // Analog Input A0
+int potReadValue = 0;
+int PWM = 0;
 
 // Definning Outputs
 #define LM1 5     // left motor - forward
@@ -42,10 +44,10 @@ void setup()
 void loop()
 {
     // Reading the Analog Signal
-    int potReadValue = analogRead(POT);
+    potReadValue = analogRead(POT);
 
     // Basic Calculation (0-1000)
-    int PWM = 1000 - potReadValue;
+    PWM = 1000 - potReadValue;
     
     // Print PWM Values to Serial Console
     Serial.println(PWM);
