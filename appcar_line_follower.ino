@@ -55,9 +55,9 @@ void loop()
     if(!(digitalRead(LS)) && !(digitalRead(RS)))     // Drive Forward
     {
         analogWrite(LM1, PWM);
-        digitalWrite(LM2, LOW);
+        digitalWrite(LM2, HIGH);
         analogWrite(RM1, PWM);
-        digitalWrite(RM2, LOW);
+        digitalWrite(RM2, HIGH);
         Serial.println("Drive Forward");
     }
     
