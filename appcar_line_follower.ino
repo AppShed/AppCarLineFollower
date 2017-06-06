@@ -64,7 +64,7 @@ void loop()
     if(!(digitalRead(LS)) && digitalRead(RS))     // Turn right
     {
         analogWrite(LM1, PWM);
-        digitalWrite(LM2, LOW);
+        digitalWrite(LM2, HIGH);
         digitalWrite(RM1, LOW);
         digitalWrite(RM2, LOW);
         Serial.println("Turning Right");
@@ -75,7 +75,7 @@ void loop()
         digitalWrite(LM1, LOW);
         digitalWrite(LM2, LOW);
         analogWrite(RM1, PWM);
-        digitalWrite(RM2, LOW);
+        digitalWrite(RM2, HIGH);
         Serial.println("Turning Left");
     }
     
