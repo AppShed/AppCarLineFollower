@@ -1,6 +1,7 @@
 /*
 Project: AppCar Line Follower
-Company: AppShed 
+Company: AppShed
+Sensor Width = 2cm or 20mm apart
 */
 
 // Include application, user and local libraries
@@ -54,6 +55,7 @@ void loop()
     Serial.println(PWM);
 
     if(!(digitalRead(LS)) && !(digitalRead(RS)))     // Drive Forward
+
     {
         analogWrite(LM1, PWM);
         digitalWrite(LM2, HIGH);
